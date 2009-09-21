@@ -1,0 +1,11 @@
+# history settings
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
+shopt -s histappend
+
+export PS1='\[$TXTBLU\]\w\[$TXTRST\]$(__git_ps1 " (%s)") \$ '
+# export PS1='\[$TXTBLU\]\w\[$TXTRST\] \$ '   # PS1 without git, should that be broken
+export PROMPT_COMMAND='echo -ne "\e]0;local:${PWD/#$HOME/~}\007"'
+
+# Change umask
+# umask 007

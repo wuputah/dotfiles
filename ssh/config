@@ -1,0 +1,54 @@
+ServerAliveInterval 60
+ServerAliveCountMax 3 
+
+host *
+  ForwardAgent yes
+  ForwardX11 no
+
+host hipster
+    Hostname lovetastic.com
+    Port 7734
+    ForwardAgent no
+    ForwardX11 no
+host ariel
+    Hostname arielpublicity.net
+host meltdown
+    Hostname 173.45.224.31
+host norbauer
+    Hostname norbauer.com
+    Port 7734
+host norbauer.com
+    Port 7734
+host loudcloud
+    Hostname 174.143.232.65
+host myenergyuse
+    Hostname      208.75.85.34
+    User          norbauer
+host joulep
+    Hostname      208.78.101.17
+    Port          7334
+    HostKeyAlias  joulep
+
+
+# production
+
+Host idgprod1
+    Hostname     65.74.174.196
+    Port         8338
+    HostKeyAlias ey02-s00338
+    User         cxomedia
+
+Host idgprod2
+    Hostname     65.74.174.196
+    Port         8339
+    HostKeyAlias ey02-s00339
+    User         cxomedia
+
+# staging
+
+Host idgstage
+    Hostname     65.74.174.196
+    Port         8340
+    HostKeyAlias ey02-s00340
+    User         cxomedia
+

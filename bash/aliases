@@ -1,0 +1,67 @@
+# System-wide aliases
+alias edit='open -e'
+alias sd='sudo'
+alias c='clear'
+alias du1='du -h -d 1'
+alias ls='ls -G'
+alias top='top -u'
+alias psa='ps wwwax'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias x='exit'
+# I used to have cd aliased here, but then you can't use cd without using pushd,
+# which makes pushd unusable in the rr function.
+alias pd='pushd >/dev/null'
+alias bd='popd >/dev/null'
+
+# git
+alias gst='git status'
+function gl () {
+  git pull $@ && git submodule init && git submodule update
+}
+alias gp='git push'
+alias gg='git log --stat --abbrev-commit'
+function gd () {
+  git diff $@ | mate
+}
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gb='git branch --color'
+alias gba='git branch -a --color'
+alias gco='git checkout'
+alias gf='git fetch'
+alias grb='git rebase'
+alias ga='git add'
+
+alias gems="cd $GEMS"
+
+# rails
+alias sc='rr && script/console'
+alias ss='rr && script/server thin'
+alias db='rr && script/dbconsole'
+alias mi='rr && rake db:migrate'
+alias ra='rr && rake'
+
+# rr will search upwards and return you to your Rails root (hence 'rr') if you are
+# inside a Rails project. It bases this off the existance of config/environment.rb.
+# If outside a Rails project, it will complain but not change your path.
+function rr {
+  pushd -n $PWD >/dev/null
+  while true; do
+    if [ -f config/environment.rb ]; then
+      popd -n >/dev/null # clean up our pushd
+      return 0
+    elif [ $PWD = '/' ]; then
+      echo "Rails root not found"
+      popd >/dev/null
+      return 1
+    else
+      cd ..
+    fi
+  done
+}
+
+# "useful" at the end of a paste
+alias happyface='echo :\)'
+alias sadface='echo :\('

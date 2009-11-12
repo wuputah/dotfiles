@@ -15,6 +15,13 @@ alias x='exit'
 alias pd='pushd >/dev/null'
 alias bd='popd >/dev/null'
 
+# executes the first argument on each of the arguments that follow
+function each () {
+  for f in "${@:2:$#}" ; do eval $1 \"$f\" ; done
+}
+
+alias unrarall='each "unrar e"'
+
 # git
 alias gst='git status'
 function gl () {
@@ -37,11 +44,13 @@ alias ga='git add'
 alias gems="cd $GEMS"
 
 # rails
-alias sc='rr && script/console'
-alias ss='rr && script/server thin'
-alias db='rr && script/dbconsole'
-alias mi='rr && rake db:migrate'
-alias ra='rr && rake'
+# we pushd/popd so you can execute these from anywhere and your working directory
+# is preserved.
+function sc () { pd; rr && script/console $@; bd; }
+function ss () { pd; rr && script/server thin $@; bd; }
+function db () { pd; rr && script/dbconsole $@; bd; }
+function mi () { pd; rr && rake db:migrate $@; bd; }
+function ra () { pd; rr && rake $@; bd; }
 
 # rr will search upwards and return you to your Rails root (hence 'rr') if you are
 # inside a Rails project. It bases this off the existance of config/environment.rb.

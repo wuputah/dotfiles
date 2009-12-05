@@ -1,0 +1,19 @@
+autoload colors && colors
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+setopt APPEND_HISTORY        # adds history
+setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
+setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
+setopt HIST_REDUCE_BLANKS
+setopt PROMPT_SUBST
+setopt AUTO_CD
+setopt EXTENDED_GLOB
+
+PROMPT='%{$fg_bold[blue]%}%3~%{$reset_color%} %# '
+precmd () { print -Pn "\e]0;local:%3~\a" }
+
+autoload -U compinit
+compinit

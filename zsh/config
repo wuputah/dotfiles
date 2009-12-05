@@ -1,4 +1,5 @@
 autoload colors && colors
+autoload -U compinit && compinit
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -14,6 +15,3 @@ setopt EXTENDED_GLOB
 
 PROMPT='%{$fg_bold[blue]%}%3~%{$reset_color%} %# '
 precmd () { print -Pn "\e]0;local:%3~\a" }
-
-autoload -U compinit
-compinit

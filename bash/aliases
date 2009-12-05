@@ -10,9 +10,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias x='exit'
-# I used to have cd aliased here, but then you can't use cd without using pushd,
-# which makes pushd unusable in the rr function.
-alias pd='pushd >/dev/null'
+function pd () { if [ $# -gt 0 ]; then pushd $1 >/dev/null; else pushd $PWD >/dev/null; fi }
 alias bd='popd >/dev/null'
 
 # executes the first argument on each of the arguments that follow

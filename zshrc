@@ -1,6 +1,6 @@
 # Import the global profile
 source /etc/profile
 
-source ~/bin/dotfiles/bash/env
+source ~/bin/dotfiles/sh/env
 source ~/bin/dotfiles/zsh/config
-source ~/bin/dotfiles/bash/aliases
+source ~/bin/dotfiles/sh/aliases

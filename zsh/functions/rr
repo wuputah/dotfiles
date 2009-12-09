@@ -1,0 +1,19 @@
+# rr will search upwards and return you to your Rails root (hence 'rr') if you are
+# inside a Rails project. It bases this off the existance of config/environment.rb.
+# If outside a Rails project, it will complain but not change your path.
+function rr {
+  pushd -q $PWD >/dev/null
+  while true; do
+    if [ -f config/environment.rb ]; then
+      popd -q >/dev/null # clean up our pushd
+      cd $PWD    # execute chpwd hook
+      return 0
+    elif [ $PWD = "/" ]; then
+      echo "Rails root not found"
+      popd -q >/dev/null
+      return 1
+    else
+      cd -q ..
+    fi
+  done
+}

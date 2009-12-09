@@ -50,25 +50,6 @@ function db () { pd; rr && script/dbconsole $@; bd; }
 function mi () { pd; rr && rake db:migrate $@; bd; }
 function ra () { pd; rr && rake $@; bd; }
 
-# rr will search upwards and return you to your Rails root (hence 'rr') if you are
-# inside a Rails project. It bases this off the existance of config/environment.rb.
-# If outside a Rails project, it will complain but not change your path.
-function rr {
-  pushd -n $PWD >/dev/null
-  while true; do
-    if [ -f config/environment.rb ]; then
-      popd -n >/dev/null # clean up our pushd
-      return 0
-    elif [ $PWD = '/' ]; then
-      echo "Rails root not found"
-      popd >/dev/null
-      return 1
-    else
-      cd ..
-    fi
-  done
-}
-
 # "useful" at the end of a paste
 alias happyface='echo :\)'
 alias sadface='echo :\('

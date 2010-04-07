@@ -15,9 +15,7 @@ host ariel
 host meltdown
     Hostname 173.45.224.31
 host norbauer
-    Hostname norbauer.com
-    Port 7734
-host norbauer.com
+    Hostname megan.norbauer.com
     Port 7734
 host loudcloud
     Hostname 174.143.232.65

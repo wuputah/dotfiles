@@ -1,17 +1,23 @@
 # System-wide aliases
+alias c='clear'
+alias x='exit'
+alias b='cd -'  # back
+alias u='cd ..' # up
+function p() { cd ~/p/$1 } # p = projects. popular folder.
+
 alias edit='open -e'
 alias sd='sudo'
-alias c='clear'
 alias du1='du -h -d 1'
 alias ls='ls -G'
 alias top='top -u'
 alias psa='ps wwwax'
+function pd () { if [ $# -gt 0 ]; then pushd $1 >/dev/null; else pushd $PWD >/dev/null; fi }
+alias bd='popd >/dev/null'
+alias my='mysql'
+alias myd='mysqldump'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias x='exit'
-function pd () { if [ $# -gt 0 ]; then pushd $1 >/dev/null; else pushd $PWD >/dev/null; fi }
-alias bd='popd >/dev/null'
 
 # executes the first argument on each of the arguments that follow
 function each () {
@@ -26,6 +32,7 @@ function gl () {
   git pull $@ && git submodule init && git submodule update
 }
 alias gp='git push'
+function gpb () { git push $@ >/dev/null & }
 alias gg='git log --stat --abbrev-commit'
 function gd () {
   git diff $@ | mate

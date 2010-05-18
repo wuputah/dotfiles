@@ -46,7 +46,9 @@ alias gf='git fetch'
 alias grb='git rebase'
 alias ga='git add'
 
-alias gems="cd $GEMS"
+alias gemset='rvm gemset'
+alias gs='rvm gemset'
+alias gsu='rvm gemset use'
 
 # rails
 # we pushd/popd so you can execute these from anywhere and your working directory

@@ -32,7 +32,7 @@ function gl () {
   git pull $@ && git submodule init && git submodule update
 }
 alias gp='git push'
-function gpb () { git push $@ >/dev/null & }
+function gpb () { git push $@ >$HOME/.git-deploys/`ruby -e "puts Time.now.to_f"`.log 2>&1 & }
 alias gg='git log --stat --abbrev-commit'
 function gd () {
   git diff $@ | mate

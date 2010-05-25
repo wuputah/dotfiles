@@ -1,4 +1,4 @@
-export PATH="/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$HOME/bin"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin"
 export EDITOR='mate_wait'
 export VISUAL=$EDITOR
 export TERM='xterm-color'

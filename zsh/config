@@ -15,6 +15,7 @@ setopt HIST_REDUCE_BLANKS
 setopt PROMPT_SUBST
 setopt AUTO_CD
 setopt EXTENDED_GLOB
+setopt NULLGLOB
 
 PROMPT='%{$fg_bold[blue]%}%3~%{$reset_color%}$(git_info_for_prompt) %# '
 precmd () { print -Pn "\e]0;local:%3~\a" }

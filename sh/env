@@ -4,4 +4,3 @@ if [ -d "$HOME/bin/dotfiles/sh/$os" -a -f "$HOME/bin/dotfiles/sh/$os/env" ]; the
 fi
 
 export VISUAL=$EDITOR
-export TERM='xterm-color'

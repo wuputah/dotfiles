@@ -1,6 +1,6 @@
 os=`uname -s | tr "[:upper:]" "[:lower:]"`
-if [ -d "~bin/dotfiles/sh/$os" -a -f "~/bin/dotfiles/sh/$os/env" ]; then
-  source ~/bin/dotfiles/sh/$os/env
+if [ -d "$HOME/bin/dotfiles/sh/$os" -a -f "$HOME/bin/dotfiles/sh/$os/env" ]; then
+  source $HOME/bin/dotfiles/sh/$os/env
 fi
 
 export VISUAL=$EDITOR

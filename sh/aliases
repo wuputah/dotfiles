@@ -1,6 +1,6 @@
 os=`uname -s | tr "[:upper:]" "[:lower:]"`
-if [ -d "~bin/dotfiles/sh/$os" -a -f "~/bin/dotfiles/sh/$os/aliases" ]; then
-  source ~/bin/dotfiles/sh/$os/aliases
+if [ -d "$HOME/bin/dotfiles/sh/$os" -a -f "$HOME/bin/dotfiles/sh/$os/aliases" ]; then
+  source $HOME/bin/dotfiles/sh/$os/aliases
 fi
 
 # System-wide aliases
@@ -8,7 +8,7 @@ alias c='clear'
 alias x='exit'
 alias b='cd -'  # back
 alias u='cd ..' # up
-function p() { cd ~/p/$1 } # p = projects. popular folder.
+function p() { cd $HOME/p/$1 } # p = projects. popular folder.
 alias psa='ps wwwax'
 
 alias edit='open -e'

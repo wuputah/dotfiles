@@ -1,10 +1,10 @@
 autoload colors && colors
 autoload -U compinit && compinit
 
-fpath=(~/bin/dotfiles/zsh/functions $fpath)
-autoload -U ~/bin/dotfiles/zsh/functions/*(:t)
+fpath=($HOME/bin/dotfiles/zsh/functions $fpath)
+autoload -U $HOME/bin/dotfiles/zsh/functions/*(:t)
 
-HISTFILE=~/.zsh_history
+HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 

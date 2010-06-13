@@ -1,0 +1,18 @@
+export EVENT_NOKQUEUE=yes # libevent/memcached fix
+export EDITOR='mate_wait'
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin"
+export MANPATH='/opt/local/share/man:/opt/local/man:/usr/share/man:/usr/local/share/man:/usr/X11/man'
+
+# LSCOLORS
+# default:
+# export LSCOLORS="exfxcxdxbxegedabagacad"
+#
+# foreground/background pairs:
+#  a/black,b/red,c/green,d/brown,e/blue,f/magenta,g/cyan,h/grey,x/default
+#  caps are bold, except: -- A/darkgrey,D/yellow,H/white
+# Ordering:
+#   1     2      3     4       5            6         7        8       9    10    11
+#  dir/symlink/socket/pipe/executable/blockdevice/chardevice/setuid/setgid/xx6+s/xx6-s
+
+#                1 2 3 4 5 6 7 8 9 0 1
+export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"

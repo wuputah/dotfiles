@@ -1,7 +1,6 @@
 os=`uname -s | tr "[:upper:]" "[:lower:]"`
-
-if [ -e "~/bin/dotfiles/sh/$os-aliases" ]; then
-  source ~/bin/dotfiles/sh/$os-aliases
+if [ -d "~bin/dotfiles/sh/$os" -a -e "~/bin/dotfiles/sh/$os/aliases" ]; then
+  source ~/bin/dotfiles/sh/$os/aliases
 fi
 
 # System-wide aliases

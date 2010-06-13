@@ -1,3 +1,2 @@
 alias ls='ls -G'
 alias top='top -u'
-

@@ -1,5 +1,5 @@
 os=`uname -s | tr "[:upper:]" "[:lower:]"`
-if [ -d "~bin/dotfiles/sh/$os" -a -e "~/bin/dotfiles/sh/$os/aliases" ]; then
+if [ -d "~bin/dotfiles/sh/$os" -a -f "~/bin/dotfiles/sh/$os/aliases" ]; then
   source ~/bin/dotfiles/sh/$os/aliases
 fi
 

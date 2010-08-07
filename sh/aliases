@@ -11,7 +11,8 @@ alias u='cd ..' # up
 function p() { cd $HOME/p/$1 } # p = projects. popular folder.
 alias psa='ps wwwax'
 
-alias edit='open -e'
+alias e='mvim'
+
 alias sd='sudo'
 alias du1='du -h -d 1'
 function pd () { if [ $# -gt 0 ]; then pushd $1 >/dev/null; else pushd $PWD >/dev/null; fi }

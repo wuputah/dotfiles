@@ -1,0 +1,23 @@
+#!/bin/sh
+
+INSTALL_LOCATION="$HOME/bin"
+INSTALL_DIRNAME="dotfiles"
+
+path="$INSTALL_LOCATION/$INSTALL_DIRNAME"
+
+mkdir -p $INSTALL_LOCATION
+if [ ! -d $path ]; then
+  git clone git@github.com:jdance/dotfiles.git $path
+fi
+
+ln -nfs $path/zshrc ~/.zshrc
+ln -nfs $path/bashrc ~/.bashrc
+ln -nfs $path/irbrc ~/.irbrc
+ln -nfs $path/vimrc ~/.vimrc
+ln -nfs $path/gvimrc ~/.gvimrc
+ln -nfs $path/vim ~/.vim
+mkdir -p ~/.ssh
+ln -nfs $path/ssh/config ~/.ssh/config
+ln -nfs ~/.bashrc ~/.bash_profile
+
+cd $path/vim && ./update_bundles

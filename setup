@@ -8,16 +8,28 @@ path="$INSTALL_LOCATION/$INSTALL_DIRNAME"
 mkdir -p $INSTALL_LOCATION
 if [ ! -d $path ]; then
   git clone git@github.com:jdance/dotfiles.git $path
+else
+  cd $path
+  git fetch origin && git rebase origin/master
+fi
+
+# fetch janus
+if [ ! -d $path/vim ]; then
+  git clone git@github.com:jdance/janus.git $path/vim
+else
+  cd $path/vim
+  git fetch origin && git rebase origin/master
 fi
 
 ln -nfs $path/zshrc ~/.zshrc
 ln -nfs $path/bashrc ~/.bashrc
 ln -nfs $path/irbrc ~/.irbrc
-ln -nfs $path/vimrc ~/.vimrc
-ln -nfs $path/gvimrc ~/.gvimrc
+ln -nfs $path/vimrc ~/.vimrc.local
+ln -nfs $path/gvimrc ~/.gvimrc.local
 ln -nfs $path/vim ~/.vim
 mkdir -p ~/.ssh
 ln -nfs $path/ssh/config ~/.ssh/config
 ln -nfs ~/.bashrc ~/.bash_profile
 
-cd $path/vim && ./update_bundles
+# build janus
+cd $path/vim && rake

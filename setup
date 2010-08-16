@@ -27,9 +27,21 @@ ln -nfs $path/irbrc ~/.irbrc
 ln -nfs $path/vimrc ~/.vimrc.local
 ln -nfs $path/gvimrc ~/.gvimrc.local
 ln -nfs $path/vim ~/.vim
+ln -nfs $path/gitignore ~/.gitignore.global
+
 mkdir -p ~/.ssh
 ln -nfs $path/ssh/config ~/.ssh/config
+
 ln -nfs ~/.bashrc ~/.bash_profile
 
 # build janus
 cd ~/.vim && rake
+
+if [ ! -f ~/.gitconfig ]; then
+  cp $path/gitconfig ~/.gitconfig
+  # probably a better way to obfuscate this... but this should do
+  git config --global user.e$(echo ma)il $(echo CDAwuEutaB | tr EABDC p@hdj).c$(echo om)
+  # really no way to do this safely
+  echo "~/.gitconfig written. You still need to set your github token manually\!"
+fi
+

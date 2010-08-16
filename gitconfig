@@ -1,0 +1,19 @@
+[user]
+	name = Jonathan Dance
+
+[core]
+	excludesfile = ~/.gitignore.global
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+
+[alias]
+	ci = commit
+	co = checkout
+	lg = log --stat --abbrev-commit
+
+[github]
+	user = jdance

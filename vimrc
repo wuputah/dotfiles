@@ -1,5 +1,8 @@
 map Y y$
 
+set showmatch " Show matching brackets
+set mat=3     " Bracket blinking
+
 " automatically remove trailing whitespace before write
 function! StripTrailingWhitespace()
   " create a mark to return to

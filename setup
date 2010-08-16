@@ -32,4 +32,4 @@ ln -nfs $path/ssh/config ~/.ssh/config
 ln -nfs ~/.bashrc ~/.bash_profile
 
 # build janus
-cd $path/vim && rake
+cd ~/.vim && rake

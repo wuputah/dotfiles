@@ -1,3 +1,5 @@
+# vim:ft=sh:
+
 # rr will search upwards and return you to your Rails root (hence 'rr') if you are
 # inside a Rails project. It bases this off the existance of config/environment.rb.
 # If outside a Rails project, it will complain but not change your path.

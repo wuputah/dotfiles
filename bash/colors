@@ -1,3 +1,5 @@
+# vim:ft=sh:
+
 TXTBLK='\e[0;30m' # Black - Regular
 TXTRED='\e[0;31m' # Red
 TXTGRN='\e[0;32m' # Green

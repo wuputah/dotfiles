@@ -1,3 +1,5 @@
+# vim:ft=sh:
+
 export EVENT_NOKQUEUE=yes # libevent/memcached fix
 export EDITOR='mvim -f'
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin"

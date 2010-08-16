@@ -1,3 +1,5 @@
+# vim:ft=sh:
+
 local gitdir=$GIT_DIR
 if [ -z "$gitdir" ]; then gitdir=.git; fi
 local g

@@ -1,3 +1,5 @@
+# vim:ft=sh:
+
 os=`uname -s | tr "[:upper:]" "[:lower:]"`
 if [ -d "$HOME/bin/dotfiles/sh/$os" -a -f "$HOME/bin/dotfiles/sh/$os/aliases" ]; then
   source $HOME/bin/dotfiles/sh/$os/aliases

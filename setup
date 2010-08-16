@@ -24,6 +24,7 @@ fi
 ln -nfs $path/zshrc ~/.zshrc
 ln -nfs $path/bashrc ~/.bashrc
 ln -nfs $path/irbrc ~/.irbrc
+ln -nfs $path/rdebugrc ~/.rdebugrc
 ln -nfs $path/vimrc ~/.vimrc.local
 ln -nfs $path/gvimrc ~/.gvimrc.local
 ln -nfs $path/vim ~/.vim

@@ -56,9 +56,9 @@ alias gemset='rvm gemset'
 alias gs='rvm gemset'
 alias gsu='rvm gemset use'
 
-function cucumber() { if [ -d .bundle ]; then bundle exec cucumber $@; else cucumber $@; fi }
-function spec() { if [ -d .bundle ]; then bundle exec spec $@; else spec $@; fi }
-function rake() { if [ -d .bundle ]; then bundle exec rake $@; else rake $@; fi }
+function cucumber() { if [ -d .bundle ]; then bundle exec cucumber $@; else /usr/bin/env cucumber $@; fi }
+function spec() { if [ -d .bundle ]; then bundle exec spec $@; else /usr/bin/env spec $@; fi }
+function rake() { if [ -d .bundle ]; then bundle exec rake $@; else /usr/bin/env rake $@; fi }
 
 # rails
 # we pushd/popd so you can execute these from anywhere and your working directory

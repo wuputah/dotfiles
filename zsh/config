@@ -1,5 +1,7 @@
 # vim:ft=sh:
 
+bindkey -e
+
 autoload colors && colors
 autoload -U compinit && compinit
 
@@ -18,6 +20,7 @@ setopt PROMPT_SUBST
 setopt AUTO_CD
 setopt EXTENDED_GLOB
 setopt NULLGLOB
+setopt MAGIC_EQUAL_SUBST
 
 PROMPT='%{$fg_bold[blue]%}%3~%{$reset_color%}$(git_info_for_prompt) %# '
 precmd () { print -Pn "\e]0;$(hostname):%3~\a" }

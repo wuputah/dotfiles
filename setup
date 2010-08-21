@@ -21,28 +21,28 @@ else
   git fetch origin && git rebase origin/master
 fi
 
-ln -nfs $path/zshrc ~/.zshrc
-ln -nfs $path/bashrc ~/.bashrc
-ln -nfs $path/irbrc ~/.irbrc
-ln -nfs $path/rdebugrc ~/.rdebugrc
-ln -nfs $path/vimrc ~/.vimrc.local
-ln -nfs $path/gvimrc ~/.gvimrc.local
-ln -nfs $path/vim ~/.vim
-ln -nfs $path/gitignore ~/.gitignore.global
+ln -nfs $path/zshrc $HOME/.zshrc
+ln -nfs $path/bashrc $HOME/.bashrc
+ln -nfs $path/irbrc $HOME/.irbrc
+ln -nfs $path/rdebugrc $HOME/.rdebugrc
+ln -nfs $path/vimrc $HOME/.vimrc.local
+ln -nfs $path/gvimrc $HOME/.gvimrc.local
+ln -nfs $path/vim $HOME/.vim
+ln -nfs $path/gitignore $HOME/.gitignore.global
 
-mkdir -p ~/.ssh
-ln -nfs $path/ssh/config ~/.ssh/config
+mkdir -p $HOME/.ssh
+ln -nfs $path/ssh/config $HOME/.ssh/config
 
-ln -nfs ~/.bashrc ~/.bash_profile
+ln -nfs $HOME/.bashrc $HOME/.bash_profile
 
 # build janus
-cd ~/.vim && rake
+cd $HOME/.vim && rake
 
-if [ ! -f ~/.gitconfig ]; then
-  cp $path/gitconfig ~/.gitconfig
+if [ ! -f $HOME/.gitconfig ]; then
+  cp $path/gitconfig $HOME/.gitconfig
   # probably a better way to obfuscate this... but this should do
   git config --global user.e$(echo ma)il $(echo CDAwuEutaB | tr EABDC p@hdj).c$(echo om)
   # really no way to do this safely
-  echo "~/.gitconfig written. You still need to set your github token manually\!"
+  echo "$HOME/.gitconfig written. You still need to set your github token manually\!"
 fi
 

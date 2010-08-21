@@ -2,3 +2,4 @@
 
 alias ls='ls -G'
 alias top='top -u'
+alias e='mvim'

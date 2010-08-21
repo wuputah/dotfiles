@@ -1,3 +1,4 @@
 # vim:ft=sh:
 
 alias ls="ls $LS_OPTIONS"
+alias e='vim'

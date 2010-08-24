@@ -1,4 +1,5 @@
 map Y y$
+map <Leader>w :bd<CR>
 
 set showmatch " Show matching brackets
 set mat=3     " Bracket blinking

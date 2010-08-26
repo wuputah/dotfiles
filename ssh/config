@@ -1,12 +1,10 @@
 ServerAliveInterval 60
-ServerAliveCountMax 3 
+ServerAliveCountMax 3
 
 host *
   ForwardAgent yes
   ForwardX11 no
 
-Host ariel
-    Hostname arielpublicity.net
 Host norbauer
     Hostname megan.norbauer.com
     Port 7734

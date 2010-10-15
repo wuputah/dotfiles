@@ -4,6 +4,8 @@ map <Leader>w :bd<CR>
 set showmatch " Show matching brackets
 set mat=3     " Bracket blinking
 
+nnoremap <silent> <cr> :noh<cr>
+
 " automatically remove trailing whitespace before write
 function! StripTrailingWhitespace()
   " create a mark to return to

@@ -5,10 +5,6 @@ host *
   ForwardAgent yes
   ForwardX11 no
 
-Host norbauer
-    Hostname megan.norbauer.com
-    Port 7734
-
 Host staging.wegowise.com
     User          deploy
 Host wegowise.com

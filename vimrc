@@ -42,7 +42,7 @@ nnoremap <leader>rl :so ~/.vimrc.local<cr>
 nnoremap <leader>s <C-w>s<C-w>j
 nnoremap <leader>v <C-w>v<C-w>l
 
-" Vertical split navigation
+" split navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -78,4 +78,4 @@ function! StripTrailingWhitespace()
     normal `Z
   endif
 endfunction
-autocmd FileType ruby,javascript,css,html,markdown,textile,rails autocmd BufWritePre :call StripTrailingWhitespace()
+autocmd FileType ruby,eruby,javascript,css,html,markdown,textile,rails autocmd BufWritePre :call StripTrailingWhitespace()

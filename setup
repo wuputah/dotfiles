@@ -15,7 +15,7 @@ fi
 
 # fetch janus
 if [ ! -d $path/vim ]; then
-  git clone git@github.com:jdance/janus.git $path/vim
+  git clone git@github.com:wuputah/janus.git $path/vim
 else
   cd $path/vim
   git fetch origin && git rebase origin/master

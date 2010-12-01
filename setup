@@ -27,6 +27,7 @@ ln -nfs $path/irbrc $HOME/.irbrc
 ln -nfs $path/rdebugrc $HOME/.rdebugrc
 ln -nfs $path/vimrc $HOME/.vimrc.local
 ln -nfs $path/gvimrc $HOME/.gvimrc.local
+ln -nfs $path/gemrc $HOME/.gemrc
 ln -nfs $path/vim $HOME/.vim
 ln -nfs $path/gitignore $HOME/.gitignore.global
 

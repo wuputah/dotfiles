@@ -5,8 +5,8 @@ export HISTCONTROL=erasedups
 export HISTSIZE=10000
 shopt -s histappend
 
-export PS1="\[$BLDBLU\]\w\[$TXTRST\]\$(__git_ps1 \" (%s)\") \$ "
-# export PS1='\[$TXTBLU\]\w\[$TXTRST\] \$ '   # PS1 without git, should that be broken
+#export PS1="\[$BLDBLU\]\w\[$TXTRST\]\$(__git_ps1 \" (%s)\") \$ "
+export PS1='\[$TXTBLU\]\w\[$TXTRST\] \$ '
 export PROMPT_COMMAND='echo -ne "\033]0;local:${PWD/#$HOME/~}\007"'
 
 # Change umask

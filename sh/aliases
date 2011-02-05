@@ -76,5 +76,5 @@ function ra() { pd; rr && rake $@; bd; }
 function rs() { pd; rr && rails $@; bd; }
 
 # "useful" at the end of a paste
-alias happyface='echo :\)'
-alias sadface='echo :\('
+alias happyface='echo :}'
+alias sadface='echo :{'

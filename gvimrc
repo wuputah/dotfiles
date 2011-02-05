@@ -9,6 +9,8 @@ nnoremap <leader>rl :so ~/.vimrc.local<cr>:so ~/.gvimrc.local<cr>
 
 " Textmate indentation shortcuts
 if has("gui_macvim")
+  map <D-T> :CommandTFlush<cr>:CommandT<cr>
+
   nmap <D-[> <<
   nmap <D-]> >>
   vmap <D-[> <gv

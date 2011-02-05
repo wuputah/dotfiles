@@ -51,11 +51,12 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" stand-in mapping when we dont have cmd key
+" stand-in mappings when we dont have cmd key (uses meta/escape)
 if !has("gui_macvim")
   map s :w<cr>
   map w :q<cr>
-  map t  :CommandT<cr>
+  map t :CommandT<cr>
+  map T :CommandTFlush<cr>:CommandT<cr>
   map F :Ack<space>
 end
 

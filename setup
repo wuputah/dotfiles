@@ -24,6 +24,7 @@ fi
 ln -nfs $path/zshrc $HOME/.zshrc
 ln -nfs $path/bashrc $HOME/.bashrc
 ln -nfs $path/irbrc $HOME/.irbrc
+ln -nfs $path/riplrc $HOME/.riplrc
 ln -nfs $path/rdebugrc $HOME/.rdebugrc
 ln -nfs $path/vimrc $HOME/.vimrc.local
 ln -nfs $path/gvimrc $HOME/.gvimrc.local

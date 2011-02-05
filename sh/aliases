@@ -22,6 +22,7 @@ alias myd='mysqldump'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias ac='grep -r'
 
 # executes the first argument on each of the arguments that follow
 function each () {
@@ -54,27 +55,28 @@ alias gf='git fetch'
 alias grb='git rebase'
 alias ga='git add'
 
+# rvm
 alias gemset='rvm gemset'
 alias gs='rvm gemset'
 alias gsu='rvm gemset use'
 
-alias irb='ripl'
+# ruby/rails
 alias r='ruby'
+alias irb='ripl'
 function rails() { if [ -x script/rails ]; then script/rails $@; else command rails $@; fi }
 function cucumber() { if [ -d .bundle ]; then bundle exec cucumber $@; else command cucumber $@; fi }
 function spec() { if [ -d .bundle ]; then bundle exec spec $@; else command spec $@; fi }
 function rake() { if [ -d .bundle ]; then bundle exec rake $@; else command rake $@; fi }
-
-# rails
-# we pushd/popd so you can execute these from anywhere and your working directory
-# is preserved.
 alias sc='rails console'
 alias ss='rails server'
 alias db='rails dbconsole'
+# we pushd/popd so you can execute these from anywhere and your working directory is preserved.
 function mi() { pd; rr && rake db:migrate $@; bd; }
 function ra() { pd; rr && rake $@; bd; }
 function rs() { pd; rr && rails $@; bd; }
 
-# "useful" at the end of a paste
+alias lg='lightning'
+alias lgr='lightning-reload'
+
 alias happyface='echo :}'
 alias sadface='echo :{'

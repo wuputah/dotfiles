@@ -6,6 +6,18 @@ host *
   ForwardX11 no
 
 Host staging.wegowise.com
-    User          deploy
+    User deploy
+Host staging
+    User deploy
+    Hostname staging.wegowise.com
 Host wegowise.com
-    User          deploy
+    User deploy
+Host wegowise
+    User deploy
+    Hostname wegowise.com
+
+Host wuputah
+    Hostname summer.wuputah.com
+Host pair
+    User ghorner
+    Hostname summer.wuputah.com

@@ -7,7 +7,7 @@ path="$INSTALL_LOCATION/$INSTALL_DIRNAME"
 
 mkdir -p $INSTALL_LOCATION
 if [ ! -d $path ]; then
-  git clone git@github.com:jdance/dotfiles.git $path
+  git clone git@github.com:wuputah/dotfiles.git $path
 else
   cd $path
   git fetch origin && git rebase origin/master
@@ -28,10 +28,11 @@ ln -nfs $path/rdebugrc $HOME/.rdebugrc
 ln -nfs $path/vimrc $HOME/.vimrc.local
 ln -nfs $path/gvimrc $HOME/.gvimrc.local
 ln -nfs $path/gemrc $HOME/.gemrc
+ln -nfs $path/screenrc $HOME/.screenrc
 ln -nfs $path/vim $HOME/.vim
 ln -nfs $path/gitignore $HOME/.gitignore.global
 
-mkdir -p $HOME/.ssh
+[ ! -d $HOME/.ssh ] && mkdir $HOME/.ssh
 ln -nfs $path/ssh/config $HOME/.ssh/config
 
 ln -nfs $HOME/.bashrc $HOME/.bash_profile

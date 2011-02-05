@@ -1,3 +1,6 @@
+set t_Co=256
+colorscheme molokai
+
 map Y y$
 map <Leader>w :bd<CR>
 

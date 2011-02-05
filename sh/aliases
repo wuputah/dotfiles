@@ -67,7 +67,7 @@ function rails() { if [ -x script/rails ]; then script/rails $@; else command ra
 function cucumber() { if [ -d .bundle ]; then bundle exec cucumber $@; else command cucumber $@; fi }
 function spec() { if [ -d .bundle ]; then bundle exec spec $@; else command spec $@; fi }
 function rake() { if [ -d .bundle ]; then bundle exec rake $@; else command rake $@; fi }
-alias sc='rails console'
+alias sc='ripl rails'
 alias ss='rails server'
 alias db='rails dbconsole'
 # we pushd/popd so you can execute these from anywhere and your working directory is preserved.

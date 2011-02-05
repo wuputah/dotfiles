@@ -1,4 +1,4 @@
 require 'ripl/hirb'
-require 'ripl/multi_line'
+require 'ripl/auto_indent'
 require 'ripl/color_result'
 require 'ripl/color_error'

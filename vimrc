@@ -71,8 +71,6 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
-nnoremap <silent> <cr> :noh<cr>
-
 " automatically remove trailing whitespace before write
 function! StripTrailingWhitespace()
   " create a mark to return to

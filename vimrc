@@ -74,18 +74,22 @@ map <leader>tm :tabmove
 
 " automatically remove trailing whitespace before write
 function! StripTrailingWhitespace()
-  " create a mark to return to
-  normal mZ
-  %s/\s\+$//e   " strip whitespace from end of lines
-  %s/\n\+\%$//e " strip extra newlines from EOF
-  if line("'Z") != line(".")
-    echo "Stripped whitespace\n"
-  endif
-  " if the mark we created is beyond EOF, go to EOF
-  if line("'Z") > line("$")
-    normal G
-  else
-    normal `Z
+  if exists("b:stripWhitespace") && b:stripWhitespace == 1
+    " create a mark to return to
+    normal mZ
+    %s/\s\+$//e   " strip whitespace from end of lines
+    %s/\n\+\%$//e " strip extra newlines from EOF
+    if line("'Z") != line(".")
+      echo "Stripped whitespace\n"
+    endif
+    " if the mark we created is beyond EOF, go to EOF
+    if line("'Z") > line("$")
+      normal G
+    else
+      normal `Z
+    endif
   endif
 endfunction
-autocmd FileType ruby,eruby,javascript,css,html,markdown,textile,rails autocmd BufWritePre :call StripTrailingWhitespace()
+autocmd FileType * let b:stripWhitespace = 0
+autocmd FileType ruby,eruby,javascript,css,html,markdown,textile let b:stripWhitespace = 1
+autocmd BufWritePre * call StripTrailingWhitespace()

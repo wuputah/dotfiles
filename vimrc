@@ -16,9 +16,9 @@ autocmd WinLeave * set nocursorline
 set ttyfast
 
 " F keys
+map <F1> :noh<cr>
 map <F2> :NERDTreeToggle<cr>
 set pastetoggle=<F3>
-map <F7> :noh<cr>
 
 " C-a and C-e in all modes
 inoremap <C-a> <C-o>^

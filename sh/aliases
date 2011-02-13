@@ -22,7 +22,10 @@ alias myd='mysqldump'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias a='ack'
+alias aa='ack -a'
 alias ac='grep -r'
+alias ff='find . | ack'
 
 # executes the first argument on each of the arguments that follow
 function each () {

@@ -15,6 +15,9 @@
 	co = checkout
   lg = log --stat --abbrev-commit
 
+[rerere]
+	enabled = true
+
 [url "git@github.com:"]
   insteadOf = "gh:"
   pushInsteadOf = "github:"

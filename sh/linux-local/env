@@ -1,0 +1,4 @@
+# vim:ft=sh:
+
+export EDITOR='gvim -f'
+export LAUNCHY_BROWSER='chromium-browser'

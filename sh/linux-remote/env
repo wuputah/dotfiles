@@ -1,0 +1,4 @@
+# vim:ft=sh:
+
+export EDITOR='vim'
+export LAUNCHY_BROWSER="links"

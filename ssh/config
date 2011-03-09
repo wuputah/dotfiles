@@ -17,6 +17,7 @@ Host wegowise
     Hostname wegowise.com
 
 Host wuputah
+    User jd
     Hostname summer.wuputah.com
 Host pair
     User ghorner

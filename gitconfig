@@ -13,7 +13,7 @@
 [alias]
 	ci = commit
 	co = checkout
-  lg = log --stat --abbrev-commit
+	lg = log --stat --abbrev-commit
 
 [rerere]
 	enabled = true
@@ -35,7 +35,7 @@
   insteadOf = "gist:"
 
 [url "git@heroku.com:"]
-  insteadOf = "heroku:"lg = log --stat --abbrev-commit
+  insteadOf = "heroku:"
 
 [github]
 	user = wuputah

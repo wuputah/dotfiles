@@ -68,6 +68,7 @@ alias gs='rvm gemset'
 alias gsu='rvm gemset use'
 
 alias h='heroku'
+alias bu='bundle'
 
 # ruby/rails
 alias r='ruby'
@@ -87,5 +88,5 @@ function rs() { pd; rr && rails $@; bd; }
 alias lg='lightning'
 alias lgr='lightning-reload'
 
-alias happyface='echo :}'
+alias happyface='echo :\}'
 alias sadface='echo :{'

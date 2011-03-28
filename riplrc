@@ -6,4 +6,7 @@ require 'ripl/color_error'
 require 'wirb'
 require 'bond'
 require 'readline'
-require 'readline_line_buffer'
+
+if RUBY_VERSION < '1.9'
+  require 'readline_line_buffer'
+end

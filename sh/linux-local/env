@@ -1,4 +1,4 @@
 # vim:ft=sh:
 
-export EDITOR='gvim -f'
-export LAUNCHY_BROWSER='chromium-browser'
+export EDITOR='vim'
+export LAUNCHY_BROWSER='firefox-4.0'

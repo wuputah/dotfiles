@@ -63,6 +63,10 @@ alias gf='git fetch'
 alias grb='git rebase'
 alias ga='git add'
 
+alias ghot='git flow hotfix'
+alias grel='git flow release'
+alias gfeat='git flow feature'
+
 # rvm
 alias gemset='rvm gemset'
 alias gs='rvm gemset'

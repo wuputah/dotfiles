@@ -4,8 +4,8 @@ colorscheme molokai
 map Y y$
 map <Leader>w :bd<CR>
 
-set showmatch " Show matching brackets
-set mat=3     " Bracket blinking
+" set showmatch " Show matching brackets
+" set mat=3     " Bracket blinking
 
 " Swap files and undo files
 set dir=~/tmp,/var/tmp,/tmp,.
@@ -60,7 +60,7 @@ if !has("gui_macvim") && !has("gui_running")
   map F :Ack<space>
 end
 
-map <C-\|> :Tabularize /\|<cr>
+map <leader>ta :Tabularize /\|<cr>
 
 " Tab mappings
 map <leader>te :tabedit

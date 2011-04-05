@@ -10,3 +10,4 @@ source $HOME/bin/dotfiles/bash/colors
 source $HOME/bin/dotfiles/bash/config
 source $HOME/bin/dotfiles/sh/aliases
 source $HOME/bin/dotfiles/bash/functions
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

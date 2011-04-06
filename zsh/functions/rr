@@ -4,7 +4,7 @@
 function rr {
   old_pwd=$PWD
   while true; do
-    if [ -f .git ]; then
+    if [ -d .git ]; then
       return 0
     elif [ $PWD = "/" ]; then
       echo "Rails root not found"

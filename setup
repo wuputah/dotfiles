@@ -23,29 +23,30 @@ fi
 
 ln -nfs $path/zshrc $HOME/.zshrc
 ln -nfs $path/bashrc $HOME/.bashrc
+ln -nfs $path/screenrc $HOME/.screenrc
+ln -nfs $path/gitignore $HOME/.gitignore.global
 ln -nfs $path/irbrc $HOME/.irbrc
 ln -nfs $path/riplrc $HOME/.riplrc
 ln -nfs $path/rdebugrc $HOME/.rdebugrc
+ln -nfs $path/gemrc $HOME/.gemrc
+ln -nfs $path/lightningrc $HOME/.lightningrc
+
 ln -nfs $path/vimrc $HOME/.vimrc.local
 ln -nfs $path/gvimrc $HOME/.gvimrc.local
-ln -nfs $path/gemrc $HOME/.gemrc
-ln -nfs $path/screenrc $HOME/.screenrc
 ln -nfs $path/vim $HOME/.vim
-ln -nfs $path/gitignore $HOME/.gitignore.global
 
 [ ! -d $HOME/.ssh ] && mkdir $HOME/.ssh
 ln -nfs $path/ssh/config $HOME/.ssh/config
 
 ln -nfs $HOME/.bashrc $HOME/.bash_profile
 
-# build janus
-cd $HOME/.vim && rake
-
 if [ ! -f $HOME/.gitconfig ]; then
   cp $path/gitconfig $HOME/.gitconfig
-  # probably a better way to obfuscate this... but this should do
-  git config --global user.e$(echo ma)il $(echo CDAwuEutaB | tr EABDC p@hdj).c$(echo om)
-  # really no way to do this safely
-  echo "$HOME/.gitconfig written. You still need to set your github token manually\!"
+  git config --global user.$(echo ECDAB | tr ABCDE ilmae) $(echo CDAwuEutaBZORG | tr EABDCGROZ p@hdjmoc.)
+  echo -n "Enter Github token: "
+  read token
+  git config --global github.token $token
 fi
 
+# build janus
+cd $HOME/.vim && rake

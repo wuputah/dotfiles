@@ -1,0 +1,47 @@
+--- 
+:shell_commands: 
+  cd: cd
+  echo: e
+  vim: v
+  less: l
+:bolts: 
+  local_ruby: 
+    globs: 
+    - "**/*.rb"
+    - bin/*
+    global: true
+    alias: rb
+  wild: 
+    globs: 
+    - "**/*"
+    global: true
+    alias: w
+  gem: 
+    globs: 
+    - /home/jd/.rvm/gems/ruby-1.9.2-p180*/gems/*
+    global: true
+  ruby: 
+    globs: 
+    - /home/jd/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.8/**/*.{rb,bundle,so,c}
+    - /home/jd/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/site_ruby/1.8/**/*.{rb,bundle,so,c}
+    global: true
+  feature:
+    functions:
+    - name: cuc
+      shell_command: cucumber
+    globs:
+    - features/**/*.feature
+    global: true
+    alias: ft
+  ruby_test: 
+    functions: 
+    - name: sp
+      shell_command: rspec
+    global: true
+    globs: 
+    - "{test,spec}/**/*_{spec,test}.rb"
+    - "{test,spec}/**/{spec,test}_*.rb"
+    - spec/**/*.spec
+    alias : t
+:complete_regex: true
+:shell: zsh

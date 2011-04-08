@@ -1,27 +1,23 @@
---- 
-:shell_commands: 
-  cd: cd
-  echo: e
-  vim: v
-  less: l
-:bolts: 
-  local_ruby: 
-    globs: 
+---
+:complete_regex: true
+:bolts:
+  local_ruby:
+    globs:
     - "**/*.rb"
     - bin/*
     global: true
     alias: rb
-  wild: 
-    globs: 
+  wild:
+    globs:
     - "**/*"
     global: true
     alias: w
-  gem: 
-    globs: 
+  gem:
+    globs:
     - /home/jd/.rvm/gems/ruby-1.9.2-p180*/gems/*
     global: true
-  ruby: 
-    globs: 
+  ruby:
+    globs:
     - /home/jd/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.8/**/*.{rb,bundle,so,c}
     - /home/jd/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/site_ruby/1.8/**/*.{rb,bundle,so,c}
     global: true
@@ -33,15 +29,25 @@
     - features/**/*.feature
     global: true
     alias: ft
-  ruby_test: 
-    functions: 
+  ruby_test:
+    functions:
     - name: sp
       shell_command: rspec
     global: true
-    globs: 
+    globs:
     - "{test,spec}/**/*_{spec,test}.rb"
     - "{test,spec}/**/{spec,test}_*.rb"
     - spec/**/*.spec
-    alias : t
-:complete_regex: true
+    alias: t
+  projects:
+    globs:
+    - /home/jdance/p/*
+    functions:
+    - name: p
+      shell_command: cd
+:shell_commands:
+  cd: cd
+  echo: e
+  vim: v
+  less: l
 :shell: zsh

@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'ripl/hirb'
-require 'ripl/auto_indent'
+require RUBY_VERSION > '1.9' ? 'ripl/ripper' : 'ripl/auto_indent'
 require 'ripl/color_result'
 require 'ripl/color_error'
 require 'wirb'

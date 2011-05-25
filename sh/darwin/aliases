@@ -1,5 +1,6 @@
 # vim:ft=sh:
 
-alias ls='ls -G'
-alias top='top -u'
-alias e='mvim'
+alias o="open"
+alias ls="ls -G"
+alias top="top -u"
+alias e="mvim"

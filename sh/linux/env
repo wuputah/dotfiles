@@ -1,4 +1,5 @@
 # vim:ft=sh:
 
+export EDITOR="vim"
 export LS_OPTIONS="--color=auto -b -B -T 0"
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin"

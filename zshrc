@@ -4,3 +4,4 @@ source $HOME/bin/dotfiles/sh/aliases
 
 if [[ -s $HOME/.rvm/scripts/rvm ]]; then source $HOME/.rvm/scripts/rvm; fi
 if [[ -s $HOME/.lightning/functions.sh ]]; then source $HOME/.lightning/functions.sh; fi
+if [[ -s $HOME/.zshrc.local ]]; then source $HOME/.zshrc.local; fi

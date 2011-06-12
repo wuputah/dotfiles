@@ -14,12 +14,12 @@
     alias: w
   gem:
     globs:
-    - /home/jd/.rvm/gems/ruby-1.9.2-p180*/gems/*
+    - $HOME/.rvm/gems/ruby-1.9.2-p180*/gems/*
     global: true
   ruby:
     globs:
-    - /home/jd/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.8/**/*.{rb,bundle,so,c}
-    - /home/jd/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/site_ruby/1.8/**/*.{rb,bundle,so,c}
+    - $HOME/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.8/**/*.{rb,bundle,so,c}
+    - $HOME/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/site_ruby/1.8/**/*.{rb,bundle,so,c}
     global: true
   feature:
     functions:
@@ -41,7 +41,7 @@
     alias: t
   projects:
     globs:
-    - /home/jdance/p/*
+    - $HOME/p/*
     functions:
     - name: p
       shell_command: cd

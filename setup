@@ -32,6 +32,7 @@ ln -nfs $path/riplrc $HOME/.riplrc
 ln -nfs $path/rdebugrc $HOME/.rdebugrc
 ln -nfs $path/gemrc $HOME/.gemrc
 ln -nfs $path/lightningrc $HOME/.lightningrc
+ln -nfs $path/janus.rake $HOME/.janus.rake
 
 ln -nfs $path/vimrc $HOME/.vimrc.local
 ln -nfs $path/gvimrc $HOME/.gvimrc.local

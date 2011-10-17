@@ -1,9 +1,9 @@
 # vim:ft=sh:
 
 export EVENT_NOKQUEUE=yes # libevent/memcached fix
-export EDITOR='mvim -f'
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin"
-export MANPATH='/opt/local/share/man:/opt/local/man:/usr/share/man:/usr/local/share/man:/usr/X11/man'
+export EDITOR='vim'
+export PATH="$HOME/bin:$HOME/Developer/bin:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin"
+export MANPATH="$HOME/Developer/share/man:/usr/share/man:/usr/local/share/man:/usr/X11/man"
 
 # LSCOLORS
 # default:

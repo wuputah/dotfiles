@@ -51,14 +51,11 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" stand-in mappings when we dont have cmd key (uses meta/escape)
-if !has("gui_macvim") && !has("gui_running")
-  map w :w<cr>
-  map q :q<cr>
-  map t :CommandT<cr>
-  map T :CommandTFlush<cr>:CommandT<cr>
-  map F :Ack<space>
-end
+map w :w<cr>
+map q :q<cr>
+map t :CommandT<cr>
+map T :CommandTFlush<cr>:CommandT<cr>
+map F :Ack<space>
 
 map <leader>ta :Tabularize /\|<cr>
 

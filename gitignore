@@ -2,3 +2,5 @@
 local/*
 Session.vim
 .rvmrc
+.bundle
+config/database.yml

@@ -5,20 +5,6 @@ host *
   ForwardAgent yes
   ForwardX11 no
 
-Host staging.wegowise.com
-    User deploy
-Host staging
-    User deploy
-    Hostname staging.wegowise.com
-Host wegowise.com
-    User deploy
-Host wegowise
-    User deploy
-    Hostname wegowise.com
-
-Host wuputah
-    User jd
-    Hostname summer.wuputah.com
-Host pair
-    User ghorner
-    Hostname summer.wuputah.com
+Host rose
+    User wuputah
+    Hostname rose.makesad.us

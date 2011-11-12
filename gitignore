@@ -4,3 +4,5 @@ Session.vim
 .rvmrc
 .bundle
 config/database.yml
+.env
+.DS_Store

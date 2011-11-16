@@ -8,6 +8,7 @@ Make sure the following is installed first:
 * git
 * rake
 * vim
+* curl
 
 It is then recommended you also install zsh, and do:
 

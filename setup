@@ -9,7 +9,7 @@ path="$INSTALL_LOCATION/$INSTALL_DIRNAME"
 
 mkdir -p $INSTALL_LOCATION
 if [ ! -d $path ]; then
-  git clone git@github.com:wuputah/dotfiles.git $path
+  git clone https://wuputah@github.com/wuputah/dotfiles $path
 else
   cd $path
   git fetch origin && git rebase origin/master
@@ -17,7 +17,7 @@ fi
 
 # fetch janus
 if [ ! -d $path/vim ]; then
-  git clone git@github.com:wuputah/janus.git $path/vim
+  git clone https://wuputah@github.com/wuputah/janus $path/vim
 else
   cd $path/vim
   git fetch origin && git rebase origin/master

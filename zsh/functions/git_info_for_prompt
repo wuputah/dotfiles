@@ -2,21 +2,21 @@
 
 local gitdir=$GIT_DIR
 if [ -z "$gitdir" ]; then gitdir=.git; fi
-local g
+local g c
 
-pushd -q $PWD
+local c=$PWD
 while true; do
   if [ -d "$gitdir" ]; then
     g="$PWD/$gitdir"
     break
   elif [ $PWD = '/' ]; then
-    popd -q
+    cd -q $c
     return 0
   else
     cd -q ..
   fi
 done
-popd -q
+cd -q $c
 
 local r
 local b

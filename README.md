@@ -1,7 +1,7 @@
 If you were me, and you wanted your dotfiles, you would probably do the
 following:
 
-    sh < <(curl https://github.com/wuputah/dotfiles/raw/master/setup)
+    sh < <(curl https://raw.github.com/wuputah/dotfiles/master/setup)
 
 Make sure the following is installed first:
 

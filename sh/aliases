@@ -47,7 +47,7 @@ function gl () {
 alias gp='git push'
 alias gpo='git push origin'
 alias gph='git push heroku'
-function gpb () { git push $@ >$HOME/.git-deploys/`ruby -e "puts Time.now.to_f"`.log 2>&1 & }
+function gpb () { git push $@ >$HOME/.deploys/`ruby -e "puts Time.now.to_f"`.log 2>&1 & }
 alias gg='git log --stat --abbrev-commit'
 alias gd='git diff'
 alias gc='git commit -v'

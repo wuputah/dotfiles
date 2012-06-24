@@ -1,3 +1,7 @@
+# vim:ft=sh:
+
+DOTFILES=$(dirname $(readlink -f $HOME/.bashrc))
+
 # Import the global profile
 source /etc/profile
 # Git completion
@@ -18,3 +22,6 @@ for file in .rvm/scripts/rvm \
 do
   if [[ -s $HOME/$file ]]; then source $HOME/$file; fi
 done
+
+echo 'Why are you using bash?'
+echo '$ chsh -s $(which zsh)'

@@ -5,8 +5,8 @@ bindkey -e
 autoload colors && colors
 autoload -U compinit && compinit
 
-fpath=($HOME/bin/dotfiles/zsh/functions $fpath)
-autoload -U $HOME/bin/dotfiles/zsh/functions/*(:t)
+fpath=($DOTFILES/zsh/functions $fpath)
+autoload -U $DOTFILES/zsh/functions/*(:t)
 
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000

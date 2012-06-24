@@ -1,12 +1,17 @@
 # vim:ft=sh:
 
 os=`uname -s | tr "[:upper:]" "[:lower:]"`
-if [ "$SSH_CLIENT" = "" ]; then loc=local; else loc=remote; fi
-if [ -d "$HOME/bin/dotfiles/sh/$os" -a -f "$HOME/bin/dotfiles/sh/$os/env" ]; then
-  source $HOME/bin/dotfiles/sh/$os/env
+if [ "$SSH_CLIENT" = "" ]; then
+  loc=local
+else
+  loc=remote
 fi
-if [ -d "$HOME/bin/dotfiles/sh/$os-$loc" -a -f "$HOME/bin/dotfiles/sh/$os-$loc/env" ]; then
-  source $HOME/bin/dotfiles/sh/$os-$loc/env
+
+if [ -d "$DOTFILES/sh/$os" -a -f "$DOTFILES/sh/$os/env" ]; then
+  source $DOTFILES/sh/$os/env
+fi
+if [ -d "$DOTFILES/sh/$os-$loc" -a -f "$DOTFILES/sh/$os-$loc/env" ]; then
+  source $DOTFILES/sh/$os-$loc/env
 fi
 
 export VISUAL=$EDITOR

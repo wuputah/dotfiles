@@ -1,6 +1,10 @@
-source $HOME/bin/dotfiles/sh/env
-source $HOME/bin/dotfiles/zsh/config
-source $HOME/bin/dotfiles/sh/aliases
+# vim:ft=sh:
+
+DOTFILES=$(dirname $(readlink -f $HOME/.zshrc))
+
+source $DOTFILES/sh/env
+source $DOTFILES/zsh/config
+source $DOTFILES/sh/aliases
 
 for file in .rvm/scripts/rvm \
             .lightning/functions.sh \

@@ -2,25 +2,19 @@
 
 set -e
 
-INSTALL_LOCATION="$HOME/bin"
+INSTALL_LOCATION="$HOME/code"
 INSTALL_DIRNAME="dotfiles"
 
 path="$INSTALL_LOCATION/$INSTALL_DIRNAME"
 
 mkdir -p $INSTALL_LOCATION
 if [ ! -d $path ]; then
-  git clone https://wuputah@github.com/wuputah/dotfiles $path
-else
-  cd $path
-  git fetch origin && git rebase origin/master
+  git clone git@github.com:wuputah/dotfiles.git $path
 fi
 
 # fetch janus
 if [ ! -d $path/vim ]; then
-  git clone https://wuputah@github.com/wuputah/janus $path/vim
-else
-  cd $path/vim
-  git fetch origin && git rebase origin/master
+  git clone git@github.com:wuputah/janus.git $path/vim
 fi
 
 ln -nfs $path/zshrc $HOME/.zshrc
@@ -46,9 +40,6 @@ ln -nfs $HOME/.bashrc $HOME/.bash_profile
 if [ ! -f $HOME/.gitconfig ]; then
   cp $path/gitconfig $HOME/.gitconfig
   git config --global user.$(echo ECDAB | tr ABCDE ilmae) $(echo CDAwuEutaBZORG | tr EABDCGROZ p@hdjmoc.)
-  echo -n "Enter Github token: "
-  read token
-  git config --global github.token $token
 fi
 
 # build janus

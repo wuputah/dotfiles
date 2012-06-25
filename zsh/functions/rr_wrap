@@ -1,0 +1,8 @@
+# vim:ft=sh:
+
+function rr_wrap {
+  pushd $PWD >/dev/null
+  rr >/dev/null
+  $@
+  popd >/dev/null
+}

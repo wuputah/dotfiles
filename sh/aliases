@@ -68,22 +68,38 @@ alias gs='rvm gemset'
 alias gsu='rvm gemset use'
 
 alias h='heroku'
+
+# bundler
 alias bu='bundle'
+alias bi='bundle install'
+alias be='bundle exec'
+function be_check { # helper
+  if [ -x .bundle/ruby/1.9.1/bin/$1 ]; then bundle exec $@; else command $@; fi
+}
+alias be_wrap='rr_wrap be_check'
+
+# foreman
+alias fm='be_wrap foreman'
+alias fs='fm start'
+alias fr='fm run'
+function fr_check { # helper, use be_check to avoid nested rr_wrap
+  if [ -f .env ]; then be_check foreman run $@; else be_check $@; fi
+}
+alias fr_wrap='rr_wrap fr_check'
 
 # ruby/rails
 alias r='ruby'
 alias irb='ripl'
-function rails() { if [ -x script/rails ]; then script/rails $@; else command rails $@; fi }
-function cucumber() { if [ -d .bundle ]; then bundle exec cucumber $@; else command cucumber $@; fi }
-function sp() { if [ -d .bundle ]; then bundle exec rspec $@; else command rspec $@; fi }
-function rake() { if [ -d .bundle ]; then bundle exec rake $@; else command rake $@; fi }
-alias sc='ripl rails'
+alias rails='fr_wrap script/rails'
+alias rs='rails'
 alias ss='rails server'
 alias db='rails dbconsole'
-# we pushd/popd so you can execute these from anywhere and your working directory is preserved.
-function mi() { pd; rr && rake db:migrate $@; bd; }
-function ra() { pd; rr && rake $@; bd; }
-function rs() { pd; rr && rails $@; bd; }
+alias cucumber='fr_wrap cucumber'
+alias sp='fr_wrap rspec'
+alias rake='fr_wrap rake'
+alias ra='rake'
+alias mi='rake db:migrate'
+alias sc='fr_wrap ripl rails'
 
 alias lg='lightning'
 alias lgr='lightning-reload'

@@ -6,8 +6,7 @@ source $DOTFILES/sh/env
 source $DOTFILES/zsh/config
 source $DOTFILES/sh/aliases
 
-for file in .rvm/scripts/rvm \
-            .lightning/functions.sh \
+for file in .lightning/functions.sh \
             .zshrc.local \
             .cinderella.profile
 do

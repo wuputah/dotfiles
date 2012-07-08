@@ -1,4 +1,8 @@
-"""""""""""" GENERAL """"""""""""""
+"# PATHOGEN ########################################
+
+call pathogen#infect()
+
+"# GENERAL #########################################
 
 set nocompatible
 " gutter
@@ -39,7 +43,7 @@ set background=dark
 colorscheme solarized
 
 
-"""""""""""" FILETYPE """"""""""""""
+"# FILETYPE ########################################
 
 function s:setupWrapping()
   set wrap
@@ -134,7 +138,7 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
-""""""""""""""""" AUTOCMD """""""""""""""""""
+"# AUTOCMD #########################################
 
 " remember last location in file
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")

@@ -37,11 +37,3 @@ if [ ! -e $HOME/.gitconfig ]; then
   cp $path/home/.gitconfig $HOME/.gitconfig
   git config --global user.$(echo ECDAB | tr ABCDE ilmae) $(echo CDAwuEutaBZORG | tr EABDCGROZ p@hdjmoc.)
 fi
-
-# clone janus
-if [ ! -d $path/vim ]; then
-  git clone git@github.com:wuputah/janus.git $path/vim
-fi
-
-# build janus
-cd $HOME/.vim && rake

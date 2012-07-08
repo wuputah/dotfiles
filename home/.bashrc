@@ -1,6 +1,6 @@
 # vim:ft=sh:
 
-DOTFILES=$(dirname $(readlink -f $HOME/.bashrc))
+DOTFILES=$(dirname $(dirname $(readlink -f $HOME/.bashrc)))
 
 # Import the global profile
 source /etc/profile

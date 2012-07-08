@@ -2,7 +2,7 @@
 	name = Jonathan Dance
 
 [core]
-	excludesfile = ~/.gitignore.global
+	excludesfile = ~/.gitconfig-gitignore
 
 [color]
 	diff = auto

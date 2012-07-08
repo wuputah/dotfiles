@@ -1,45 +1,46 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
-INSTALL_LOCATION="$HOME/code"
-INSTALL_DIRNAME="dotfiles"
+[ "$DOTFILES_LOCATION" = "" ] && DOTFILES_LOCATION="$HOME/code"
+[ "$DOTFILES_DIRNAME" = "" ] && DOTFILES_DIRNAME="dotfiles"
 
-path="$INSTALL_LOCATION/$INSTALL_DIRNAME"
+path="$DOTFILES_LOCATION/$DOTFILES_DIRNAME"
 
-mkdir -p $INSTALL_LOCATION
+# set up wherever we're going to put the dotfiles
+[ ! -d $DOTFILES_LOCATION ] && mkdir -p $DOTFILES_LOCATION
+
+# clone dotfiles
 if [ ! -d $path ]; then
   git clone git@github.com:wuputah/dotfiles.git $path
 fi
 
-# fetch janus
-if [ ! -d $path/vim ]; then
-  git clone git@github.com:wuputah/janus.git $path/vim
-fi
+# install main dotfiles from home/
+shopt -s dotglob
+for f in $path/home/*; do
+  ln -nfs $f $HOME/$(basename $f)
+done
+shopt -u dotglob
 
-ln -nfs $path/zshrc $HOME/.zshrc
-ln -nfs $path/bashrc $HOME/.bashrc
-ln -nfs $path/screenrc $HOME/.screenrc
-ln -nfs $path/gitignore $HOME/.gitignore.global
-ln -nfs $path/irbrc $HOME/.irbrc
-ln -nfs $path/riplrc $HOME/.riplrc
-ln -nfs $path/rdebugrc $HOME/.rdebugrc
-ln -nfs $path/gemrc $HOME/.gemrc
-ln -nfs $path/lightningrc $HOME/.lightningrc
-ln -nfs $path/janus.rake $HOME/.janus.rake
-
-ln -nfs $path/vimrc $HOME/.vimrc.local
-ln -nfs $path/gvimrc $HOME/.gvimrc.local
-ln -nfs $path/vim $HOME/.vim
-
+# install .ssh/config separately since we dont want ssh keys in dotfiles
 [ ! -d $HOME/.ssh ] && mkdir $HOME/.ssh
 ln -nfs $path/ssh/config $HOME/.ssh/config
 
+# pretend bash works like zsh even though it clearly does not
 ln -nfs $HOME/.bashrc $HOME/.bash_profile
 
-if [ ! -f $HOME/.gitconfig ]; then
-  cp $path/gitconfig $HOME/.gitconfig
+# did we symlink .gitconfig? undo!
+[ -h $HOME/.gitconfig ] && rm $HOME/.gitconfig
+
+# if .gitconfig is now missing, copy it and set up email address
+if [ ! -e $HOME/.gitconfig ]; then
+  cp $path/home/.gitconfig $HOME/.gitconfig
   git config --global user.$(echo ECDAB | tr ABCDE ilmae) $(echo CDAwuEutaBZORG | tr EABDCGROZ p@hdjmoc.)
+fi
+
+# clone janus
+if [ ! -d $path/vim ]; then
+  git clone git@github.com:wuputah/janus.git $path/vim
 fi
 
 # build janus

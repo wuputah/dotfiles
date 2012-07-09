@@ -37,3 +37,6 @@ if [ ! -e $HOME/.gitconfig ]; then
   cp $path/home/.gitconfig $HOME/.gitconfig
   git config --global user.$(echo ECDAB | tr ABCDE ilmae) $(echo CDAwuEutaBZORG | tr EABDCGROZ p@hdjmoc.)
 fi
+
+# init/update submodules (vim plugins)
+git submodule update --init

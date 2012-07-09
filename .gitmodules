@@ -1,0 +1,42 @@
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = github:altercation/vim-colors-solarized.git
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
+	url = github:scrooloose/nerdcommenter.git
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = github:scrooloose/nerdtree.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = github:scrooloose/syntastic.git
+[submodule "vim/bundle/ctrlp"]
+	path = vim/bundle/ctrlp
+	url = github:kien/ctrlp.vim.git
+[submodule "vim/bundle/fugitive"]
+	path = vim/bundle/fugitive
+	url = github:tpope/vim-fugitive.git
+[submodule "vim/bundle/git"]
+	path = vim/bundle/git
+	url = github:tpope/vim-git.git
+[submodule "vim/bundle/surround"]
+	path = vim/bundle/surround
+	url = github:tpope/vim-surround.git
+[submodule "vim/bundle/rails"]
+	path = vim/bundle/rails
+	url = github:tpope/vim-rails.git
+[submodule "vim/bundle/repeat"]
+	path = vim/bundle/repeat
+	url = github:tpope/vim-repeat.git
+[submodule "vim/bundle/gist"]
+	path = vim/bundle/gist
+	url = github:mattn/gist-vim.git
+[submodule "vim/bundle/markdown"]
+	path = vim/bundle/markdown
+	url = github:tpope/vim-markdown.git
+[submodule "vim/bundle/javascript"]
+	path = vim/bundle/javascript
+	url = github:pangloss/vim-javascript.git
+[submodule "vim/bundle/coffeescript"]
+	path = vim/bundle/coffeescript
+	url = github:kchmck/vim-coffee-script.git

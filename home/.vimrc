@@ -11,7 +11,7 @@ set number ruler
 set nowrap tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set autoindent
 " whitespace fill characters
-set list listchars=tab:\ \ ,trail:·
+set list listchars=tab:\ \ ,trail:·,extends:>,precedes:<
 " searching
 set hlsearch incsearch ignorecase smartcase
 " status bar
@@ -19,21 +19,24 @@ set laststatus=2
 " min number of lines at top/bottom of window
 set scrolloff=3
 " swap files and undo files
-set dir=~/.vim/backup backupdir=~/.vim/backup
+set dir=~/.vim/_temp// backupdir=~/.vim/_backup//
 " make it fast
 set ttyfast
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-" allow plugins to set identation
+" allow plugins to set indentation
 filetype plugin indent on
 " show (partial) command in the status line
 set showcmd
 " use modeline overrides
 set modeline modelines=10
+" utf8
+set encoding=utf-8
 
 " tab completion
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,vendor/gems/*,.bundle/*,vendor/bundle/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.rbo,*.class,*.gem,*.zip,*.tar,*.tar.*,*.rar,*.swp,*~,._*
+set wildignore+=*/vendor/gems/*,*/.bundle/*,*/vendor/bundle/*,*/.sass-cache/*,*/vendor/cache/*
 
 " colors/colorscheme
 syntax on
@@ -60,7 +63,7 @@ endfunction
 au FileType make set noexpandtab
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,*.rake} set ft=ruby
 
 " md, markdown, and mk are markdown and define buffer-local preview
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
@@ -74,7 +77,8 @@ au BufRead,BufNewFile *.txt call s:setupWrapping()
 au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
 
-"""""""""""" MAPPINGS """"""""""""""
+"# MAPPINGS ########################################
+
 map Y y$
 map <Leader>w :bd<CR>
 
@@ -87,7 +91,7 @@ autocmd WinLeave * set nocursorline
 " F keys
 map <F1> :noh<cr>
 map <F2> :NERDTreeToggle<cr>
-set pastetoggle=<F3>
+set pastetoggle=<F4>
 
 " C-a and C-e in all modes
 inoremap <C-a> <C-o>^

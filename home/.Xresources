@@ -1,0 +1,18 @@
+URxvt.perl-ext:      default,tabbed,url-select
+URxvt.keysym.M-u:    perl:url-select:select_next
+URxvt.urlLauncher:   firefox
+URxvt.underlineURLs: true
+URxvt.depth:         32
+URxvt.scrollBar:     true
+URxvt.scrollstyle:   plain
+URxvt.scrollColor:   #444444
+URxvt.background:    [85]#000000
+URxvt.foreground:    #AAAAAA
+URxvt.color12:       #2774B6
+URxvt*font:          -*-terminus-medium-r-normal-*-14-*-*-*-*-*-*-*
+URxvt*boldFont:      -*-terminus-bold-r-normal-*-14-*-*-*-*-*-*-*
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg:    3
+URxvt.tabbed.tab-bg:    0
+

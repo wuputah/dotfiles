@@ -19,7 +19,7 @@ set laststatus=2
 " min number of lines at top/bottom of window
 set scrolloff=3
 " swap files and undo files
-set dir=~/.vim/_temp// backupdir=~/.vim/_backup//
+set dir=~/.vim/._temp// backupdir=~/.vim/._backup//
 " make it fast
 set ttyfast
 " allow backspacing over everything in insert mode

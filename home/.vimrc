@@ -111,8 +111,8 @@ inoremap <C-j> <Esc>
 vnoremap <C-j> <Esc>
 
 " Quick-open .vimrc
-nnoremap <leader>ev <C-w><C-v><C-l>:e ~/.vimrc.local<cr>
-nnoremap <leader>rl :so ~/.vimrc.local<cr>
+nnoremap <leader>ev <C-w><C-v><C-l>:e ~/.vimrc<cr>
+nnoremap <leader>rl :so ~/.vimrc<cr>
 
 " Open a split, switch over to it
 nnoremap <leader>s <C-w>s<C-w>j

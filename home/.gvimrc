@@ -1,16 +1,14 @@
 " disable all bells
 set visualbell t_vb=
 
-" janus opens this by default; i want it closed
-autocmd VimEnter * NERDTreeClose
-
 " change reload to load both
-nnoremap <leader>rl :so ~/.vimrc.local<cr>:so ~/.gvimrc.local<cr>
+nnoremap <leader>rl :so ~/.vimrc<cr>:so ~/.gvimrc<cr>
 
 " gvim
 if !has("gui_macvim")
-  set guifont=Anonymous\ Pro\ 11
+  set guifont=Terminus\ 10
   set guioptions-=m
+  set guioptions-=T
   set listchars=tab:\ \ 
   map <a-s> :w<cr>
   map <a-w> :q<cr>

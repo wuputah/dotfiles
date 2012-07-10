@@ -29,14 +29,13 @@ ln -nfs $path/ssh/config $HOME/.ssh/config
 # pretend bash works like zsh even though it clearly does not
 ln -nfs $HOME/.bashrc $HOME/.bash_profile
 
-# did we symlink .gitconfig? undo!
-[ -h $HOME/.gitconfig ] && rm $HOME/.gitconfig
+# undo symlinking of a few special cases; copy files instead
+for f in $HOME/.gitignore $HOME/.gemrc; do
+  [ -h $f ] && rm $f && cp $path/home/$(basename $f) $HOME/$(basename $f)
+done
 
-# if .gitconfig is now missing, copy it and set up email address
-if [ ! -e $HOME/.gitconfig ]; then
-  cp $path/home/.gitconfig $HOME/.gitconfig
-  git config --global user.$(echo ECDAB | tr ABCDE ilmae) $(echo CDAwuEutaBZORG | tr EABDCGROZ p@hdjmoc.)
-fi
+# set up email address
+git config --global user.$(echo ECDAB | tr ABCDE ilmae) $(echo CDAwuEutaBZORG | tr EABDCGROZ p@hdjmoc.)
 
 # init/update submodules (vim plugins)
 git submodule update --init

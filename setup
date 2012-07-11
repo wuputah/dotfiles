@@ -30,7 +30,7 @@ ln -nfs $path/ssh/config $HOME/.ssh/config
 ln -nfs $HOME/.bashrc $HOME/.bash_profile
 
 # undo symlinking of a few special cases; copy files instead
-for f in $HOME/.gitignore $HOME/.gemrc; do
+for f in $HOME/.gitconfig $HOME/.gemrc; do
   [ -h $f ] && rm $f && cp $path/home/$(basename $f) $HOME/$(basename $f)
 done
 

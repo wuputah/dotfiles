@@ -1,6 +1,6 @@
 # vim:ft=sh:
 
-DOTFILES=$(dirname $(dirname $(readlink -f $HOME/.zshrc)))
+DOTFILES=$(dirname $(dirname $(readlink $HOME/.zshrc)))
 
 source $DOTFILES/sh/env
 source $DOTFILES/zsh/config

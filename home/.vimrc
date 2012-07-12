@@ -126,8 +126,6 @@ nnoremap <C-l> <C-w>l
 
 map w :w<cr>
 map q :q<cr>
-map t :CommandT<cr>
-map T :CommandTFlush<cr>:CommandT<cr>
 map F :Ack<space>
 
 map <leader>ta :Tabularize /\|<cr>

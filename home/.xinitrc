@@ -23,7 +23,7 @@ xmodmap $HOME/.Xmodmap
 [ -f $HOME/.xprofile ] && . $HOME/.xprofile
 
 # launch WM
-DEFAULT_SESSION=openbox-session
+DEFAULT_SESSION=awesome
 case $1 in
   openbox)
     exec openbox-session

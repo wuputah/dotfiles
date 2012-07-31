@@ -34,6 +34,12 @@ for f in $HOME/.gitconfig $HOME/.gemrc; do
   [ -h $f ] && rm $f && cp $path/home/$(basename $f) $HOME/$(basename $f)
 done
 
+# copy bin scripts
+mkdir -p $HOME/bin
+for f in $path/bin/*; do
+  ln -nfs $f $HOME/bin/$(basename $f)
+done
+
 # set up email address
 git config --global user.$(echo ECDAB | tr ABCDE ilmae) $(echo CDAwuEutaBZORG | tr EABDCGROZ p@hdjmoc.)
 

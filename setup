@@ -22,6 +22,17 @@ for f in $path/home/*; do
 done
 shopt -u dotglob
 
+if [ -d $HOME/.config ]; then
+  for f in $path/dot-config/*; do
+    target=$HOME/.config/$(basename $f)
+    if [ -e $target ]; then
+      echo "$target exists, not overwriting."
+    else
+      ln -ns $f $target
+    fi
+  done
+fi
+
 # install .ssh/config separately since we dont want ssh keys in dotfiles
 [ ! -d $HOME/.ssh ] && mkdir $HOME/.ssh
 ln -nfs $path/ssh/config $HOME/.ssh/config

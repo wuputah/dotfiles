@@ -46,3 +46,6 @@
 [submodule "vim/bundle/haml"]
 	path = vim/bundle/haml
 	url = github:tpope/vim-haml.git
+[submodule "vim/bundle/lua"]
+	path = vim/bundle/lua
+	url = github:xolox/vim-lua-ftplugin.git

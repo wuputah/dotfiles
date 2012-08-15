@@ -37,9 +37,6 @@ fi
 [ ! -d $HOME/.ssh ] && mkdir $HOME/.ssh
 ln -nfs $path/ssh/config $HOME/.ssh/config
 
-# pretend bash works like zsh even though it clearly does not
-ln -nfs $HOME/.bashrc $HOME/.bash_profile
-
 # undo symlinking of a few special cases; copy files instead
 for f in $HOME/.gitconfig $HOME/.gemrc; do
   [ -h $f ] && rm $f && cp $path/home/$(basename $f) $HOME/$(basename $f)

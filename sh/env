@@ -27,5 +27,6 @@ if [ -d $HOME/.rvm ]; then
 fi
 
 if [ -d $HOME/.gem ]; then
-  export PATH="$HOME/.gem/ruby/1.9.1/bin:$PATH"
+  export GEM_HOME="$HOME/.gem/ruby/1.9.1"
+  export PATH="$GEM_HOME/bin:$PATH"
 fi

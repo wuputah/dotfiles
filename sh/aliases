@@ -18,14 +18,11 @@ alias sd='sudo'
 alias du1='du -h -d 1'
 function pd () { if [ $# -gt 0 ]; then pushd $1 >/dev/null; else pushd $PWD >/dev/null; fi }
 alias bd='popd >/dev/null'
-alias my='mysql'
-alias myd='mysqldump'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias a='ack'
-alias aa='ack -a'
-alias ac='grep -r'
+alias a='ack --ignore-dir .bundle'
+alias aa='a -a'
 alias ff='find . | ack'
 alias l='less'
 
@@ -62,12 +59,13 @@ alias ghot='git flow hotfix'
 alias grel='git flow release'
 alias gfeat='git flow feature'
 
-# rvm
-alias gemset='rvm gemset'
-alias gs='rvm gemset'
-alias gsu='rvm gemset use'
-
+# heroku
 alias h='heroku'
+alias ha='heroku addons:open'
+alias hp='heroku pg:psql'
+alias hpi='heroku pg:info'
+
+alias p='psql'
 
 # bundler
 alias bu='bundle'

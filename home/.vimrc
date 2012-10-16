@@ -11,7 +11,7 @@ set number ruler
 set nowrap tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set autoindent
 " whitespace fill characters
-set list listchars=tab:\ \ ,trail:·,extends:>,precedes:<
+set list listchars=tab:\ \ ,trail:\ ,extends:>,precedes:<
 " searching
 set hlsearch incsearch ignorecase smartcase
 " status bar

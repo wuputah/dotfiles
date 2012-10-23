@@ -54,6 +54,7 @@ alias gco='git checkout'
 alias gf='git fetch'
 alias grb='git rebase'
 alias ga='git add'
+alias gaa='git add -A'
 
 alias ghot='git flow hotfix'
 alias grel='git flow release'
@@ -69,7 +70,7 @@ alias p='psql'
 
 # bundler
 alias bu='bundle'
-alias bi='bundle install'
+alias bi='bundle install --path .bundle'
 alias be='bundle exec'
 function be_check { # helper
   if [ -x .bundle/ruby/1.9.1/bin/$1 ]; then bundle exec $@; else command $@; fi

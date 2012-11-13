@@ -4,6 +4,4 @@ hsetroot -solid "#333333"
 xcompmgr -n &
 pidgin &
 firefox &
-urxvt &
-batti &
 xscreensaver &

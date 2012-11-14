@@ -36,7 +36,7 @@ set encoding=utf-8
 " tab completion
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.rbo,*.class,*.gem,*.zip,*.tar,*.tar.*,*.rar,*.swp,*~,._*
-set wildignore+=*/vendor/gems/*,*/.bundle/*,*/vendor/bundle/*,*/.sass-cache/*,*/vendor/cache/*
+set wildignore+=*/vendor/gems/*,*/.bundle/*,*/vendor/bundle/*,*/.sass-cache/*,*/vendor/cache/*,*/tmp/cache/*
 
 " colors/colorscheme
 syntax on

@@ -2,6 +2,5 @@
 
 hsetroot -solid "#333333"
 xcompmgr -n &
+xautolock -time 5 -locker i3lock &
 pidgin &
-firefox &
-xscreensaver &

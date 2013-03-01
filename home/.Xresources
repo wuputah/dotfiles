@@ -7,6 +7,7 @@ URxvt.foreground:    #AAAAAA
 URxvt.color12:       #2774B6
 URxvt*font:          -*-terminus-medium-r-normal-*-14-*-*-*-*-*-*-*
 URxvt*boldFont:      -*-terminus-bold-r-normal-*-14-*-*-*-*-*-*-*
+URxvt.urgentOnBell:  true
 
 URxvt.perl-ext: default,url-select,keyboard-select
 

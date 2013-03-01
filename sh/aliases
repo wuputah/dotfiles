@@ -70,7 +70,7 @@ alias p='psql'
 
 # bundler
 alias bu='bundle'
-alias bi='bundle install --path .bundle'
+alias bi='bundle install --path .bundle --binstubs bin'
 alias be='bundle exec'
 function be_check { # helper
   if [ -x .bundle/ruby/1.9.1/bin/$1 ]; then bundle exec $@; else command $@; fi
@@ -93,12 +93,10 @@ alias rails='fr_wrap script/rails'
 alias rs='rails'
 alias ss='rails server'
 alias db='rails dbconsole'
-alias cucumber='fr_wrap cucumber'
 alias sp='fr_wrap rspec'
-alias rake='fr_wrap rake'
 alias ra='rake'
 alias mi='rake db:migrate'
-alias sc='fr_wrap ripl rails'
+alias sc='fr_wrap script/rails console'
 
 alias lg='lightning'
 alias lgr='lightning-reload'

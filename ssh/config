@@ -8,16 +8,3 @@ host *
 Host rose
     User wuputah
     Hostname rose.makesad.us
-
-Host bastion
-    Hostname bastion.herokai.com
-    User jdance
-    ForwardAgent yes
-
-Host bastion-us-west-2.herokai.com
-    User jdance
-    ForwardAgent yes
-
-Host 10.*
-    ProxyCommand ssh -qax bastion "nc -w 600 %h %p"
-    User root

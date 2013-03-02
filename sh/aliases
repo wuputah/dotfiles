@@ -70,7 +70,7 @@ alias p='psql'
 
 # bundler
 alias bu='bundle'
-alias bi='bundle install --path .bundle --binstubs bin'
+alias bi='bundle install --path .bundle --binstubs .bundle/bin'
 alias be='bundle exec'
 function be_check { # helper
   if [ -x .bundle/ruby/1.9.1/bin/$1 ]; then bundle exec $@; else command $@; fi

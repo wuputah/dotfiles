@@ -1,5 +1,5 @@
 turn on networking
-pacman -S $(cat pkglist)
+pacman -S $(< pkglist)
 useradd -m -g users -s /usr/bin/zsh -G wheel jd
 add %wheel to sudo
 log in as self
@@ -9,3 +9,15 @@ start slim
 
 current archlinux workarounds:
 * fix terminus font
+
+--
+
+install packer
+packer -S $(< pkglist.extra)
+
+firefox sync
+lastpass
+chromium login / sync
+generate ssh key
+add key to github
+add key to heroku or copy heroku key from lastpass

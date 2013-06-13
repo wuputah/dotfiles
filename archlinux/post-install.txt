@@ -1,0 +1,11 @@
+turn on networking
+pacman -S $(cat pkglist)
+useradd -m -g users -s /usr/bin/zsh -G wheel jd
+add %wheel to sudo
+log in as self
+clone dotfiles
+run dotfiles/setup
+start slim
+
+current archlinux workarounds:
+* fix terminus font

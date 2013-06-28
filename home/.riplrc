@@ -1,3 +1,4 @@
+# ft=ruby
 require 'rubygems'
 require 'ripl/hirb'
 require RUBY_VERSION > '1.9' ? 'ripl/ripper' : 'ripl/auto_indent'

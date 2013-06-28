@@ -2,5 +2,5 @@
 
 hsetroot -solid "#333333"
 xcompmgr -n &
-xautolock -time 5 -locker i3lock &
+xautolock -time 5 -locker 'i3lock -i ~/.background.png -c 000000' &
 pidgin &

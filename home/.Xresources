@@ -23,3 +23,6 @@ URxvt.tabbed.tabbar-fg: 2
 URxvt.tabbed.tabbar-bg: 0
 URxvt.tabbed.tab-fg:    3
 URxvt.tabbed.tab-bg:    0
+
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintslight

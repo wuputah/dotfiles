@@ -2,4 +2,14 @@
 
 export EDITOR="vim"
 export LS_OPTIONS="--color=auto -b -B -T 0"
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin"
+
+PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin"
+
+# re-add /{s,}bin if they're not symlinks (assuming to /usr/{s,}bin)
+for dir in /{s,}bin; do
+  if test -d $dir -a ! -h $dir; then
+    PATH="$PATH:$dir"
+  fi
+done
+
+export PATH

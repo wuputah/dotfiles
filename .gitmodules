@@ -49,3 +49,6 @@
 [submodule "vim/bundle/lua"]
 	path = vim/bundle/lua
 	url = github:xolox/vim-lua-ftplugin.git
+[submodule "vim/bundle/vim-airline"]
+	path = vim/bundle/vim-airline
+	url = github:bling/vim-airline.git

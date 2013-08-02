@@ -22,5 +22,9 @@ xmodmap $HOME/.Xmodmap
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f $HOME/.xprofile ] && . $HOME/.xprofile
 
+# source dotfiles env (e.g. so $BROWSER is set)
+DOTFILES=$(dirname $(dirname $(readlink -f $HOME/.xinitrc)))
+source $DOTFILES/sh/env
+
 # launch WM
 exec i3

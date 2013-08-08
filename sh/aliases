@@ -8,19 +8,9 @@ if [ -d "$DOTFILES/sh/$os-$loc" -a -f "$DOTFILES/sh/$os-$loc/aliases" ]; then
 fi
 
 # System-wide aliases
-alias c='clear'
-alias x='exit'
-alias b='cd -'  # back
-alias u='cd ..' # up
-alias psa='ps wwwax'
-
 alias sd='sudo'
+alias cal='cal -3'
 alias du1='du -h -d 1'
-function pd () { if [ $# -gt 0 ]; then pushd $1 >/dev/null; else pushd $PWD >/dev/null; fi }
-alias bd='popd >/dev/null'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
 alias a='ack --ignore-dir .bundle'
 alias aa='a -a'
 alias ff='find . | ack'
@@ -55,10 +45,6 @@ alias gf='git fetch'
 alias grb='git rebase'
 alias ga='git add'
 alias gaa='git add -A'
-
-alias ghot='git flow hotfix'
-alias grel='git flow release'
-alias gfeat='git flow feature'
 
 # heroku
 alias h='heroku'

@@ -31,3 +31,7 @@ if [ -d $HOME/.gem ]; then
   export GEM_HOME="$HOME/.gem/ruby/1.9.1"
   export PATH="$GEM_HOME/bin:$PATH"
 fi
+
+if [ -d $HOME/homebrew ]; then
+  export PATH="$HOME/homebrew/bin:$PATH"
+fi

@@ -6,7 +6,7 @@ nnoremap <leader>rl :so ~/.vimrc<cr>:so ~/.gvimrc<cr>
 
 " gvim
 if !has("gui_macvim")
-  set guifont=Terminus\ 10
+  set guifont=Terminess\ Powerline\ 10
   set guioptions-=m
   set guioptions-=T
   set listchars=tab:\ \ 
@@ -17,7 +17,7 @@ if !has("gui_macvim")
   map <a-F> :Ack<space>
 endif
 
-" Textmate indentation shortcuts
+" macvim
 if has("gui_macvim")
   set guifont=Anonymous\ Pro:h12
   map <leader>tt :CommandTFlush<cr>:CommandT<cr>

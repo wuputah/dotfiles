@@ -9,7 +9,6 @@ fi
 
 # System-wide aliases
 alias sd='sudo'
-alias cal='cal -3'
 alias du1='du -h -d 1'
 alias a='ack --ignore-dir .bundle'
 alias aa='a -a'

@@ -2,3 +2,4 @@
 
 alias ls="ls $LS_OPTIONS"
 alias e='vim'
+alias cal='cal -3'

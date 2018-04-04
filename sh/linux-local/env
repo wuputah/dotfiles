@@ -1,4 +1,4 @@
 # vim:ft=sh:
 
-export BROWSER='chromium'
+export BROWSER='firefox'
 export LAUNCHY_BROWSER=$BROWSER

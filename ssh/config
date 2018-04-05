@@ -8,3 +8,7 @@ host *
 Host rose
     User wuputah
     Hostname rose.makesad.us
+
+UseRoaming no
+
+

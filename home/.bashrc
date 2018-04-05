@@ -1,7 +1,5 @@
 # vim:ft=sh:
 
-DOTFILES=$(dirname $(dirname $(readlink -f $HOME/.bashrc)))
-
 # Import the global profile
 source /etc/profile
 # Git completion
@@ -9,16 +7,17 @@ if [ -f /opt/local/share/doc/git-core/contrib/completion/git-completion.bash ]; 
   source /opt/local/share/doc/git-core/contrib/completion/git-completion.bash
 fi
 
-source $HOME/bin/dotfiles/sh/env
-source $HOME/bin/dotfiles/bash/colors
-source $HOME/bin/dotfiles/bash/config
-source $HOME/bin/dotfiles/sh/aliases
-source $HOME/bin/dotfiles/bash/functions
 
-for file in .rvm/scripts/rvm \
-            .lightning/functions.sh \
-            .bashrc.local \
-            .cinderella.profile
+DOTFILES=$(dirname $(dirname $(readlink $HOME/.bashrc)))
+
+source $DOTFILES/sh/env
+source $DOTFILES/bash/colors
+source $DOTFILES/bash/config
+source $DOTFILES/sh/aliases
+source $DOTFILES/bash/functions
+
+for file in .lightning/functions.sh \
+            .bashrc.local
 do
   if [[ -s $HOME/$file ]]; then source $HOME/$file; fi
 done

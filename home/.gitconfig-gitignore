@@ -6,3 +6,4 @@ Session.vim
 config/database.yml
 .env
 .DS_Store
+/*.gem

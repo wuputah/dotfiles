@@ -73,7 +73,6 @@ alias fr_wrap='rr_wrap fr_check'
 
 # ruby/rails
 alias r='ruby'
-alias irb='ripl'
 alias rails='fr_wrap script/rails'
 alias rs='rails'
 alias ss='rails server'

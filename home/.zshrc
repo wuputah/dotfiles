@@ -9,5 +9,7 @@ source $DOTFILES/sh/aliases
 for file in .lightning/functions.sh \
             .zshrc.local
 do
-  if [[ -s $HOME/$file ]]; then source $HOME/$file; fi
+  if [[ -s $HOME/$file ]]; then
+    source $HOME/$file
+  fi
 done
